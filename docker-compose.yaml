@@ -1,0 +1,39 @@
+services:
+  database:
+    image: mysql
+    restart: unless-stopped
+    container_name: data_react
+    environment:
+      MYSQL_ROOT_PASSWORD: 2901
+      MYSQL_DATABASE: works
+    networks:
+      - mynet
+
+  back:
+    build: back
+    depends_on:
+      - database
+    ports:
+      - "5001:5000"
+    networks:
+      - mynet
+    volumes:
+      - ./back:/app
+
+  front:
+    build: frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - mynet
+    volumes:
+      - ./frontend:/app
+      - node_modules:/app/node_modules
+
+networks:
+  mynet:
+    driver: bridge
+
+volumes:
+  my_database_data:
+  node_modules:
