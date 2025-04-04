@@ -1,0 +1,104 @@
+.list_item{
+    background-color: rgb(210, 192, 192);
+    padding: 10px;
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (max-width:480px)  {
+    .list_item{
+        flex-direction: column;
+    }
+}
+
+text{
+    flex: 1;
+}
+
+.form_admin{
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+.form_admin input{
+    height: 40px;
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+.inp_link{
+    flex: 1;
+}
+.form_admin div{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.but_plus_link{
+    max-width: 100px;
+    width: 100px;
+    height: 45px;
+    margin: 10px;
+    background-color: rgb(176, 231, 176);
+    border-radius: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    transition: 0.3s;
+    
+}
+.but_plus_link:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.but_send_to_serv{
+    max-width: 150px;
+
+}
+
+.but_send_to_serv{
+    max-width: 150px;
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    background-color: rgb(134, 97, 97);
+    color: white;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: auto;
+}
+.but_send_to_serv:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.list_link{
+    max-width: 700px;
+    margin: 20px auto;
+}
+.one_link{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.one_link li{
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.one_link button{
+    max-width: 80px;
+    height: 30px;
+    background-color: rgb(126, 31, 31);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
